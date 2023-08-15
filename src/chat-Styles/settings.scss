@@ -1,0 +1,62 @@
+.Settings{
+    background-color:#1480EC;
+    height:100vh;
+    overflow-y: hidden;
+}
+.settings-container{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "logo-container profile-area"
+    "links          profile-area";
+}
+.logo-container{
+    h1{
+        color:#fff;
+        font-size:3em;
+    }
+}
+.profile-container{
+    grid-area:profile-area;
+    background-color: #fff;
+    height:100%;
+    width:100%;
+    padding:2rem 2rem;
+    .profile-inner{
+        border:3px solid #EEF0F9;
+        padding:2rem;
+        border-radius: 10px;
+    }
+    .profile-input{
+        display:flex;
+        justify-content: space-between;
+        gap:130px;
+        input{
+            width:27em;
+            height:4.4em;
+            background-color: transparent;
+            border:1px solid black;
+            border-radius:17px;
+            padding-bottom:40px;
+        }
+        button{
+            border:none;
+            background-color: #1480EC;
+            border-radius:10px;
+            margin-top:13px;
+            font-size:1.4em;
+            padding:15px 25px;
+        }
+    }
+    h1{
+        color:#000;
+        padding-bottom: 10px;
+    }
+    label{
+        color:#000;
+        font-size: 1em;
+    }
+}

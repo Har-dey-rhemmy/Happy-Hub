@@ -1,0 +1,706 @@
+$borderradius:14px;
+$btnsize:1.3em;
+$justify:center;
+$inputwidth:7em;
+$inputscreenwidth:5em;
+$inputbg:transparent;
+$btnsmallsize:.7em;
+$gridwidth:20em;
+// @import 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// #root {
+//   max-width: 1280px;
+//   margin: 0 auto;
+//   text-align: center;
+//   border:1px solid red;
+// }
+/*******Log In Page Start************/
+.App{
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height:100vh;
+}
+.hidden{
+  display:none;
+}
+.login-header{
+  margin-bottom:40px;
+}
+.logo{
+  margin-bottom:80px;
+}
+.form-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin:0 auto;
+  padding: 2rem;
+  form{
+    width:38em;
+    display:grid;
+    grid-template-columns: 20em 15em 4em;
+    grid-template-rows:3em 3em 1em 3.5em 1em;
+    row-gap:2em;
+    grid-template-areas: 
+    "input-1 input-1 input-1"
+    "input-2 input-2 input-2"
+    "forgot  forgot  forgot"
+    "sign-in sign-in sign-in"
+    "sign-up sign-up sign-up";
+  }
+  .decor{
+    text-decoration:none;
+    color:#fff;
+  }
+  .email{
+    grid-area: input-1;
+  }
+  .pass{
+    grid-area:input-2;
+  }
+  input{
+    margin-bottom:1.5em;
+    width:38em;
+    height:3em;
+    border-radius:$borderradius;
+    background-color: transparent;
+    border:.7px solid white;
+    padding-left:2em;
+    justify-content: center;
+    justify-items:center;
+    font-size:1em;
+    &::placeholder{
+      color:#fff;
+    }
+  }
+  .forgot-btn{
+    background-color: transparent;
+    color:#4361AF;
+    border:none;
+    font-size:$btnsize;
+    grid-area:forgot;
+    justify-self:flex-end;
+    margin-left:-120px;
+  }
+  .sign-in-btn{
+    grid-area:sign-in;
+    width:9em;
+    height:2.9em;
+    padding:12px 34px;
+    border-radius:$borderradius;
+    border:none;
+    background-color: #1480EC;
+    font-size:$btnsize;
+    justify-self: center;
+    cursor:pointer;
+  }
+  .sign-up{
+    grid-area:sign-up;
+    font-size:$btnsize;
+    word-spacing:2px;
+    button{
+      border:none;
+      background-color:transparent;
+      font-size:$btnsize;
+      cursor:pointer;
+    }
+  }
+}
+@media screen and (max-width:425px){
+  .login-header{
+    margin-top:5em;
+  }
+  .hidden{
+    font-family: 'Pacifico', cursive;
+    display:block;
+    text-align: center;
+    margin:0 auto;
+  }
+  .form-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+    form{
+      margin-top:1em;
+      width:$gridwidth;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 8em 8em 4em;
+      grid-template-rows:2.5em 2.5em 1em 3.5em 1em;
+      row-gap:2em;
+      grid-template-areas: 
+      "input-1 input-1 input-1"
+      "input-2 input-2 input-2"
+      "forgot  forgot  forgot"
+      "sign-in sign-in sign-in"
+      "sign-up sign-up sign-up";
+    }
+    input{
+      width:20em;
+      height:2.5em;
+    }
+    .email{
+      grid-area: input-1;
+      justify-self:center;
+      margin-left:120px;
+    }
+    .pass{
+      grid-area:input-2;
+      justify-self:center;
+    }
+    .forgot-btn{
+      grid-area:forgot;
+      justify-content: center;
+      border:1px solid red;
+    }
+    .sign-in-btn{
+      grid-area:sign-in;
+    }
+    .sign-up{
+      grid-area:sign-up;
+      font-size:$btnsmallsize;
+    }
+  }
+}
+/*******Log In Page End************/
+/*******Sigm Up Page Start************/
+.signup{
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height:100vh;
+  padding-top:2rem;
+}
+.sign-up-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin:0 auto;
+}
+.app-logo{
+  width:128px;
+  height:128px;
+  margin:0 auto;
+}
+.sign-up-form{
+    margin:0 auto;
+    width:39em;
+    display:grid;
+    justify-content: center;
+    grid-template-columns:39em;
+    grid-template-rows:3em 3em 3em 3em 3.5em;
+    row-gap:2em;
+    grid-template-areas: 
+    "input-1"
+    "input-2"
+    "pass"
+    "confirm"
+    "sign-up";
+  input{
+    margin-bottom:1.5em;
+    width:38em;
+    height:3em;
+    border-radius:$borderradius;
+    background-color: transparent;
+    border:.7px solid white;
+    padding-left:2em;
+    justify-content: center;
+    justify-items:center;
+    font-size:1em;
+    &::placeholder{
+      color:#fff;
+    }
+  }
+  .mail{
+    grid-area: input-1;
+    justify-self: center;
+  }
+  .username{
+    grid-area:input-2;
+    justify-self: center;
+  }
+  .pass{
+    grid-area:pass;
+    justify-self: center;
+  }
+  .passconfirm{
+    grid-area: confirm;
+    justify-self: center;
+  }
+  .continue-btn{
+    border-radius:$borderradius;
+    border:none;
+    background-color: #1480EC;
+    font-size:$btnsize;
+    grid-area:sign-up;
+    justify-self: center;
+    width:9em;
+    height:2.9em;
+    cursor:pointer;
+  }
+   .decor{
+    text-decoration:none;
+    color:#fff;
+  }
+}
+@media screen and (max-width:425px){
+  .sign-up-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+  }
+  .app-logo{
+    width:80px;
+    height:80px;
+    margin:0 auto;
+  }
+  .signup-header{
+    margin-top:4.7em;
+  }
+  .hidden{
+    font-family: 'Pacifico', cursive;
+    display:block;
+    text-align: center;
+    margin:0 auto;
+  }
+  .sign-up-form{
+      margin:0 auto;
+      width:$gridwidth;
+      display:grid;
+      justify-content: center;
+      grid-template-columns:20em;
+      grid-template-rows:3em 3em 3em 3em 3.5em;
+      row-gap:2em;
+      grid-template-areas: 
+      "input-1"
+      "input-2"
+      "pass"
+      "confirm"
+      "sign-up";
+      input{
+        margin-bottom:1.5em;
+        width:19em;
+        height:2.7em;
+      }
+      .mail{
+        grid-area: input-1;
+        justify-self: center;
+      }
+      .username{
+        grid-area:input-2;
+        justify-self: center;
+      }
+      .pass{
+        grid-area:pass;
+        justify-self: center;
+      }
+      .passconfirm{
+        grid-area: confirm;
+        justify-self: center;
+      }
+      .continue-btn{
+        grid-area:sign-up;
+        justify-self: center;
+        width:6em;
+        height:2.5em;
+        cursor:pointer;
+      }
+      .decor{
+        text-decoration:none;
+        color:#fff;
+      }
+  }
+}
+/*******SIgn Up Page End************/
+/*******Info Start************/
+.info{
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height:100vh;
+  padding-top:2rem;
+}
+.info-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin:0 auto;
+}
+form{
+    width:38em;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 9em 9em 9em 11em;
+    grid-template-rows:3em 3em 3em 1.5em 1em;
+    row-gap:2em;
+    column-gap:20px;
+    grid-template-areas: 
+    "input-1 input-1 input-1 input-1"
+    "input-2 input-2 input-2 input-2"
+    "month   day     year     year  "
+    "male    female empty    empty"
+    "info    info    info    info   ";
+  .fname{
+    grid-area:input-1;
+    margin-bottom:1.5em;
+    width:38em;
+    height:3em;
+    border-radius:$borderradius;
+    background-color: transparent;
+    border:.7px solid white;
+    padding-left:2em;
+    justify-content: center;
+    justify-items:center;
+    font-size:1em;
+    &::placeholder{
+      color:#fff;
+    }
+  }
+  .radio-male{
+    grid-area:male;
+    justify-self:flex-start;
+    label{
+      font-size:$btnsize;
+      font-weight:500;
+    }
+  }
+  .radio-female{
+    grid-area:female;
+    justify-self:flex-start;
+    label{
+      font-size:$btnsize;
+      font-weight:500;
+    }
+  }
+  .month{
+    grid-area:month;
+    width:$inputwidth;
+    background-color: $inputbg;
+    border-radius:$borderradius;
+    font-size:$btnsize;
+    border:.7px solid white;
+    option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+    }
+  }
+  .day{
+    grid-area:day;
+    width:$inputwidth;
+    background-color: $inputbg;
+    border-radius:$borderradius;
+    font-size:$btnsize;
+    border:.7px solid white;
+    option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+    }
+  }
+  .year{
+    grid-area:year;
+    width:$inputwidth;
+    background-color: $inputbg;
+    border-radius:$borderradius;
+    font-size:$btnsize;
+    border:.7px solid white;
+    option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+    }
+  }
+  .lname{
+    grid-area:input-2;
+    margin-bottom:1.5em;
+    width:38em;
+    height:3em;
+    border-radius:$borderradius;
+    background-color: transparent;
+    border:.7px solid white;
+    padding-left:2em;
+    justify-content: center;
+    justify-items:center;
+    font-size:1em;
+    &::placeholder{
+      color:#fff;
+    }
+  }
+}
+.info-link{
+  text-decoration: none;
+  color:#fff;
+}
+.info-btn{
+  grid-area:info;
+  width:9em;
+  height:2.9em;
+  padding:12px 34px;
+  border-radius:$borderradius;
+  border:none;
+  background-color: #1480EC;
+  font-size:$btnsize;
+  justify-self: center;
+  cursor:pointer;
+}
+@media screen and (max-width:480px){
+  .info-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+  }
+  .info-header{
+    margin-top:4.5em;
+  }
+  .hidden{
+    font-family: 'Pacifico', cursive;
+    display:block;
+    text-align: center;
+    margin:0 auto;
+  }
+  form{
+    width:$gridwidth;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 7em 7em 4em 2em;
+    grid-template-rows:3em 3em 3em 1.5em 1em;
+    row-gap:2em;
+    column-gap:20px;
+    grid-template-areas: 
+    "input-1 input-1 input-1 input-1"
+    "input-2 input-2 input-2 input-2"
+    "month   day     year     year  "
+    "male    male   female    female"
+    "info    info    info     info  ";
+    .fname{
+      grid-area: input-1;
+      justify-self: center;
+      width:19em;
+    }
+    .lname{
+      grid-area: input-2;
+      justify-self: center;
+      width:19em;
+    }
+    .month{
+      grid-area:month;
+      width:$inputscreenwidth;
+      justify-self:center;
+      margin-left:2em;
+      option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+      }
+    }    
+    .day{
+      grid-area: day;
+      width:3em;
+      justify-self: center;
+      margin-left:30px;
+      option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+      }
+    
+    }
+    .year{
+      grid-area: year;
+      width:$inputscreenwidth;
+      justify-self:center;
+      option{
+      padding-left:1.7em;
+      text-align: center;
+      color:#000;
+      }
+    }
+    .radio-male{
+      grid-area:male;
+      justify-self:center;
+      label{
+      font-size:$btnsize;
+      font-weight:500;
+      }
+    }
+    .radio-female{
+      grid-area:female;
+      justify-self: left;
+      label{
+      font-size:$btnsize;
+      font-weight:500;
+      }
+    }
+    .info-btn{
+      grid-area:info;
+      justify-self: center;
+    }
+  }
+
+}
+/*******Info End************/
+/*******Contact Start************/
+.contact{
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height:100vh;
+  padding-top:1rem;
+  overflow-y: hidden;
+}
+.contact-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin:0 auto;
+}
+label{
+  font-size:1.5em;
+}
+.contact-form{
+  width:38em;
+  display:grid;
+  justify-content: center;
+  grid-template-columns: 38em;
+  grid-template-rows:1em 3em 3em 1em 3em 3em 3.5em;
+  row-gap:2em;
+  column-gap:20px;
+  grid-template-areas:
+  "label-1" 
+  "input-1 "
+  "input-2 "
+  "label-2"
+  "input-3 "
+  "input-4 "
+  "finish";
+  input{
+    margin-bottom:1.5em;
+    width:38em;
+    height:3em;
+    border-radius:$borderradius;
+    background-color: transparent;
+    border:.7px solid white;
+    padding-left:2em;
+    justify-content: center;
+    justify-items:center;
+    font-size:1em;
+    &::placeholder{
+      color:#fff;
+    }
+  }
+  .label-1{
+    grid-area:label-1;
+    justify-self: flex-start;
+  }
+  .contact-one-mail{
+    grid-area:input-1;
+  }
+  .phone-number-one{
+    grid-area:input-2;
+  }
+  .label-2{
+    grid-area:label-2;
+    justify-self: flex-start;
+  }
+  .contact-two-mail{
+    grid-area:input-3;
+  }
+  .phone-number-two{
+    grid-area:input-4;
+  }
+  .finish{
+    grid-area:finish;
+    width:9em;
+    height:2.9em;
+    border-radius:$borderradius;
+    border:none;
+    background-color: #1480EC;
+    font-size:$btnsize;
+    justify-self: center;
+    cursor:pointer;
+  }
+  .contact-link{
+    text-decoration: none;
+    color:#fff;
+  }
+}
+@media screen and (max-width:425px) {
+  .contact-header{
+    margin-top:3.5em;
+  }
+  .hidden{
+    font-family: 'Pacifico', cursive;
+    display:block;
+    text-align: center;
+    margin:0 auto;
+  }
+  .contact-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+  }
+  .contact-form{
+    width:20em;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 20em;
+    grid-template-rows:1em 3em 3em 1em 3em 3em 3.5em;
+    row-gap:2em;
+    column-gap:20px;
+    grid-template-areas:
+    "label-1" 
+    "input-1 "
+    "input-2 "
+    "label-2"
+    "input-3 "
+    "input-4 "
+    "finish";
+    input{
+      width:19em;
+      justify-self: center;
+    }
+    .label-1{
+      grid-area:label-1;
+      justify-self: flex-start;
+    }
+    .contact-one-mail{
+      grid-area:input-1;
+    }
+    .phone-number-one{
+      grid-area:input-2;
+    }
+    .label-2{
+      grid-area:label-2;
+      justify-self: flex-start;
+    }
+    .contact-two-mail{
+      grid-area:input-3;
+    }
+    .phone-number-two{
+      grid-area:input-4;
+    }
+    .finish{
+      grid-area:finish;
+    }
+  }
+}
+/*******Contact End************/

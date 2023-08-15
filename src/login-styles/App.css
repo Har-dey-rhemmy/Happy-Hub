@@ -1,0 +1,681 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/*******Log In Page Start************/
+.App {
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-header {
+  margin-bottom: 40px;
+}
+
+.logo {
+  margin-bottom: 80px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.form-container form {
+  width: 38em;
+  display: grid;
+  grid-template-columns: 20em 15em 4em;
+  grid-template-rows: 3em 3em 1em 3.5em 1em;
+  row-gap: 2em;
+  grid-template-areas: "input-1 input-1 input-1" "input-2 input-2 input-2" "forgot  forgot  forgot" "sign-in sign-in sign-in" "sign-up sign-up sign-up";
+}
+.form-container .decor {
+  text-decoration: none;
+  color: #fff;
+}
+.form-container .email {
+  grid-area: input-1;
+}
+.form-container .pass {
+  grid-area: input-2;
+}
+.form-container input {
+  margin-bottom: 1.5em;
+  width: 38em;
+  height: 3em;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 0.7px solid white;
+  padding-left: 2em;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+}
+.form-container input::-moz-placeholder {
+  color: #fff;
+}
+.form-container input::placeholder {
+  color: #fff;
+}
+.form-container .forgot-btn {
+  background-color: transparent;
+  color: #4361AF;
+  border: none;
+  font-size: 1.3em;
+  grid-area: forgot;
+  justify-self: flex-end;
+  margin-left: -120px;
+}
+.form-container .sign-in-btn {
+  grid-area: sign-in;
+  width: 9em;
+  height: 2.9em;
+  padding: 12px 34px;
+  border-radius: 14px;
+  border: none;
+  background-color: #1480EC;
+  font-size: 1.3em;
+  justify-self: center;
+  cursor: pointer;
+}
+.form-container .sign-up {
+  grid-area: sign-up;
+  font-size: 1.3em;
+  word-spacing: 2px;
+}
+.form-container .sign-up button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .login-header {
+    margin-top: 5em;
+  }
+  .hidden {
+    font-family: "Pacifico", cursive;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .form-container form {
+    margin-top: 1em;
+    width: 20em;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 8em 8em 4em;
+    grid-template-rows: 2.5em 2.5em 1em 3.5em 1em;
+    row-gap: 2em;
+    grid-template-areas: "input-1 input-1 input-1" "input-2 input-2 input-2" "forgot  forgot  forgot" "sign-in sign-in sign-in" "sign-up sign-up sign-up";
+  }
+  .form-container input {
+    width: 20em;
+    height: 2.5em;
+  }
+  .form-container .email {
+    grid-area: input-1;
+    justify-self: center;
+    margin-left: 120px;
+  }
+  .form-container .pass {
+    grid-area: input-2;
+    justify-self: center;
+  }
+  .form-container .forgot-btn {
+    grid-area: forgot;
+    justify-content: center;
+    border: 1px solid red;
+  }
+  .form-container .sign-in-btn {
+    grid-area: sign-in;
+  }
+  .form-container .sign-up {
+    grid-area: sign-up;
+    font-size: 0.7em;
+  }
+}
+/*******Log In Page End************/
+/*******Sigm Up Page Start************/
+.signup {
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+.sign-up-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.app-logo {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+}
+
+.sign-up-form {
+  margin: 0 auto;
+  width: 39em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 39em;
+  grid-template-rows: 3em 3em 3em 3em 3.5em;
+  row-gap: 2em;
+  grid-template-areas: "input-1" "input-2" "pass" "confirm" "sign-up";
+}
+.sign-up-form input {
+  margin-bottom: 1.5em;
+  width: 38em;
+  height: 3em;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 0.7px solid white;
+  padding-left: 2em;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+}
+.sign-up-form input::-moz-placeholder {
+  color: #fff;
+}
+.sign-up-form input::placeholder {
+  color: #fff;
+}
+.sign-up-form .mail {
+  grid-area: input-1;
+  justify-self: center;
+}
+.sign-up-form .username {
+  grid-area: input-2;
+  justify-self: center;
+}
+.sign-up-form .pass {
+  grid-area: pass;
+  justify-self: center;
+}
+.sign-up-form .passconfirm {
+  grid-area: confirm;
+  justify-self: center;
+}
+.sign-up-form .continue-btn {
+  border-radius: 14px;
+  border: none;
+  background-color: #1480EC;
+  font-size: 1.3em;
+  grid-area: sign-up;
+  justify-self: center;
+  width: 9em;
+  height: 2.9em;
+  cursor: pointer;
+}
+.sign-up-form .decor {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .sign-up-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .app-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  .signup-header {
+    margin-top: 4.7em;
+  }
+  .hidden {
+    font-family: "Pacifico", cursive;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .sign-up-form {
+    margin: 0 auto;
+    width: 20em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20em;
+    grid-template-rows: 3em 3em 3em 3em 3.5em;
+    row-gap: 2em;
+    grid-template-areas: "input-1" "input-2" "pass" "confirm" "sign-up";
+  }
+  .sign-up-form input {
+    margin-bottom: 1.5em;
+    width: 19em;
+    height: 2.7em;
+  }
+  .sign-up-form .mail {
+    grid-area: input-1;
+    justify-self: center;
+  }
+  .sign-up-form .username {
+    grid-area: input-2;
+    justify-self: center;
+  }
+  .sign-up-form .pass {
+    grid-area: pass;
+    justify-self: center;
+  }
+  .sign-up-form .passconfirm {
+    grid-area: confirm;
+    justify-self: center;
+  }
+  .sign-up-form .continue-btn {
+    grid-area: sign-up;
+    justify-self: center;
+    width: 6em;
+    height: 2.5em;
+    cursor: pointer;
+  }
+  .sign-up-form .decor {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+/*******SIgn Up Page End************/
+/*******Info Start************/
+.info {
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+form {
+  width: 38em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 9em 9em 9em 11em;
+  grid-template-rows: 3em 3em 3em 1.5em 1em;
+  row-gap: 2em;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-areas: "input-1 input-1 input-1 input-1" "input-2 input-2 input-2 input-2" "month   day     year     year  " "male    female empty    empty" "info    info    info    info   ";
+}
+form .fname {
+  grid-area: input-1;
+  margin-bottom: 1.5em;
+  width: 38em;
+  height: 3em;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 0.7px solid white;
+  padding-left: 2em;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+}
+form .fname::-moz-placeholder {
+  color: #fff;
+}
+form .fname::placeholder {
+  color: #fff;
+}
+form .radio-male {
+  grid-area: male;
+  justify-self: flex-start;
+}
+form .radio-male label {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+form .radio-female {
+  grid-area: female;
+  justify-self: flex-start;
+}
+form .radio-female label {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+form .month {
+  grid-area: month;
+  width: 7em;
+  background-color: transparent;
+  border-radius: 14px;
+  font-size: 1.3em;
+  border: 0.7px solid white;
+}
+form .month option {
+  padding-left: 1.7em;
+  text-align: center;
+  color: #000;
+}
+form .day {
+  grid-area: day;
+  width: 7em;
+  background-color: transparent;
+  border-radius: 14px;
+  font-size: 1.3em;
+  border: 0.7px solid white;
+}
+form .day option {
+  padding-left: 1.7em;
+  text-align: center;
+  color: #000;
+}
+form .year {
+  grid-area: year;
+  width: 7em;
+  background-color: transparent;
+  border-radius: 14px;
+  font-size: 1.3em;
+  border: 0.7px solid white;
+}
+form .year option {
+  padding-left: 1.7em;
+  text-align: center;
+  color: #000;
+}
+form .lname {
+  grid-area: input-2;
+  margin-bottom: 1.5em;
+  width: 38em;
+  height: 3em;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 0.7px solid white;
+  padding-left: 2em;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+}
+form .lname::-moz-placeholder {
+  color: #fff;
+}
+form .lname::placeholder {
+  color: #fff;
+}
+
+.info-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.info-btn {
+  grid-area: info;
+  width: 9em;
+  height: 2.9em;
+  padding: 12px 34px;
+  border-radius: 14px;
+  border: none;
+  background-color: #1480EC;
+  font-size: 1.3em;
+  justify-self: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .info-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .info-header {
+    margin-top: 4.5em;
+  }
+  .hidden {
+    font-family: "Pacifico", cursive;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  form {
+    width: 20em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 7em 7em 4em 2em;
+    grid-template-rows: 3em 3em 3em 1.5em 1em;
+    row-gap: 2em;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    grid-template-areas: "input-1 input-1 input-1 input-1" "input-2 input-2 input-2 input-2" "month   day     year     year  " "male    male   female    female" "info    info    info     info  ";
+  }
+  form .fname {
+    grid-area: input-1;
+    justify-self: center;
+    width: 19em;
+  }
+  form .lname {
+    grid-area: input-2;
+    justify-self: center;
+    width: 19em;
+  }
+  form .month {
+    grid-area: month;
+    width: 5em;
+    justify-self: center;
+    margin-left: 2em;
+  }
+  form .month option {
+    padding-left: 1.7em;
+    text-align: center;
+    color: #000;
+  }
+  form .day {
+    grid-area: day;
+    width: 3em;
+    justify-self: center;
+    margin-left: 30px;
+  }
+  form .day option {
+    padding-left: 1.7em;
+    text-align: center;
+    color: #000;
+  }
+  form .year {
+    grid-area: year;
+    width: 5em;
+    justify-self: center;
+  }
+  form .year option {
+    padding-left: 1.7em;
+    text-align: center;
+    color: #000;
+  }
+  form .radio-male {
+    grid-area: male;
+    justify-self: center;
+  }
+  form .radio-male label {
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  form .radio-female {
+    grid-area: female;
+    justify-self: left;
+  }
+  form .radio-female label {
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  form .info-btn {
+    grid-area: info;
+    justify-self: center;
+  }
+}
+/*******Info End************/
+/*******Contact Start************/
+.contact {
+  background-image: url("../login-assets/sign-in-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  padding-top: 1rem;
+  overflow-y: hidden;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+.contact-form {
+  width: 38em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 38em;
+  grid-template-rows: 1em 3em 3em 1em 3em 3em 3.5em;
+  row-gap: 2em;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-areas: "label-1" "input-1 " "input-2 " "label-2" "input-3 " "input-4 " "finish";
+}
+.contact-form input {
+  margin-bottom: 1.5em;
+  width: 38em;
+  height: 3em;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 0.7px solid white;
+  padding-left: 2em;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1em;
+}
+.contact-form input::-moz-placeholder {
+  color: #fff;
+}
+.contact-form input::placeholder {
+  color: #fff;
+}
+.contact-form .label-1 {
+  grid-area: label-1;
+  justify-self: flex-start;
+}
+.contact-form .contact-one-mail {
+  grid-area: input-1;
+}
+.contact-form .phone-number-one {
+  grid-area: input-2;
+}
+.contact-form .label-2 {
+  grid-area: label-2;
+  justify-self: flex-start;
+}
+.contact-form .contact-two-mail {
+  grid-area: input-3;
+}
+.contact-form .phone-number-two {
+  grid-area: input-4;
+}
+.contact-form .finish {
+  grid-area: finish;
+  width: 9em;
+  height: 2.9em;
+  border-radius: 14px;
+  border: none;
+  background-color: #1480EC;
+  font-size: 1.3em;
+  justify-self: center;
+  cursor: pointer;
+}
+.contact-form .contact-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .contact-header {
+    margin-top: 3.5em;
+  }
+  .hidden {
+    font-family: "Pacifico", cursive;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .contact-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .contact-form {
+    width: 20em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20em;
+    grid-template-rows: 1em 3em 3em 1em 3em 3em 3.5em;
+    row-gap: 2em;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    grid-template-areas: "label-1" "input-1 " "input-2 " "label-2" "input-3 " "input-4 " "finish";
+  }
+  .contact-form input {
+    width: 19em;
+    justify-self: center;
+  }
+  .contact-form .label-1 {
+    grid-area: label-1;
+    justify-self: flex-start;
+  }
+  .contact-form .contact-one-mail {
+    grid-area: input-1;
+  }
+  .contact-form .phone-number-one {
+    grid-area: input-2;
+  }
+  .contact-form .label-2 {
+    grid-area: label-2;
+    justify-self: flex-start;
+  }
+  .contact-form .contact-two-mail {
+    grid-area: input-3;
+  }
+  .contact-form .phone-number-two {
+    grid-area: input-4;
+  }
+  .contact-form .finish {
+    grid-area: finish;
+  }
+}
+/*******Contact End************//*# sourceMappingURL=App.css.map */
